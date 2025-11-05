@@ -1,4 +1,3 @@
-package support.cse131;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -32,7 +31,7 @@ import javax.swing.JOptionPane;
  *
  */
 public class ArgsProcessor {
-	
+
 	private static interface CheckValue {
 		boolean check(String s);
 	}

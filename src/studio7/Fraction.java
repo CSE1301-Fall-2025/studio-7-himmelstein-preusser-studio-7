@@ -31,12 +31,27 @@ public class Fraction {
         return fraction;
     }
 
+    public String Simplify() {
+        for (int i = denominator; i > 0; i--) {
+            if (denominator % i == 0) {
+                if (numerator % i == 0) {
+                    String simplify = numerator / i + "/" + denominator / i;
+                    return simplify;
+                }
+            }
+        }
+        return "null";
+    }
+
     public static void main(String[] args) {
         Fraction f1 = new Fraction(4, 7);
         Fraction f2 = new Fraction(6, 11);
+        Fraction f3 = new Fraction(175, 15);
 
         System.out.println(f1.Add(f1, f2));
         System.out.println(f1.Multiply(f1, f2));
         System.out.println(f1.Reciprocal());
+        System.out.println(f3.Simplify());
+
     }
 }
